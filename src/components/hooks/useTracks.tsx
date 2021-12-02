@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import SpotifyWebApi from 'spotify-web-api-js'
 
-export const useTracks = (value:string) => {
+export const useTracks = (value:string, indice:string) => {
 
     const [plist, setPlist] = useState<any>("hello")
     const spotify = new SpotifyWebApi();
     console.log("value---->"+`${value}`)
     useEffect(() => {
     spotify.setAccessToken(window.localStorage.getItem("SpotifyToken"))
-    spotify.searchTracks(value,{limit: 10, offset: 30}).then(
+    spotify.searchTracks(value,{limit: 10, offset: parseInt(indice)}).then(
         function (data) {
           setPlist(data)
         },
@@ -16,7 +16,7 @@ export const useTracks = (value:string) => {
           console.error(err);
         }
       );
-    }, [value])
+    }, [value, indice])
   
     return{plist}
 }
