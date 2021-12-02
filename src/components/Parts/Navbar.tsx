@@ -11,7 +11,7 @@ function Navbar() {
       <img src={Logo} alt="" width="97"/>
       
     </a>
-    <a style={{color:"#eb6608"}} className="color-primary navbar-brand" href="/">
+    <a style={{color:"#eb6608"}} className="color-primary navbar-brand">
       <img className="mx-3 rounded-circle"  src={data?.images[0]?.url} alt="" width="35"/>
       {data?.display_name}
     </a>

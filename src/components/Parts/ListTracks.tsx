@@ -12,11 +12,11 @@ function ListTracks() {
   console.log(total)
   const pages:any = new Array()
   if (total >= 200) {
-        for (let index = 0; index < 20; index++) {
+        for (let index = 0; index < 10; index++) {
         pages.push(index)
     }
   }else{
-      const i = Math.floor(total/20)
+      const i = Math.floor(total/10)
        for (let index = 0; index < i; index++) {
         pages.push(index)
         
