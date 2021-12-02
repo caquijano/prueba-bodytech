@@ -1,23 +1,12 @@
 import React from "react";
 import Logo  from "../../images/spotify-logo.svg";
+import { loginUrl, getTokenFromUrl } from "./LoginUrl";
 
 function Login() {
-  const scopes = [
-    "user-read-currently-playing",
-    "user-read-recently-played",
-    "user-read-playback-state",
-    "user-top-read",
-    "user-modify-playback-state",
-  ];
-
-  const loginUrl = `${process.env.REACT_APP_SPOTIFY_ENDPOINT}?client_id=${
-    process.env.REACT_APP_SPOTIFY_CLIENT_ID
-  }&response_type=token&redirect_uri=${
-    process.env.REACT_APP_REDIRECT_URI
-  }&scope=${scopes.join("%20")}&show_dialog=true`;
+  console.log(getTokenFromUrl())
   return (
     <div style={{width:"100%", display:"flex",justifyContent: "center", alignItems: "center", paddingBlock:"5%"}}>
-      <div className="card text-center col-sm-5 "abs-center>
+      <div className="card text-center col-sm-5 ">
         <article className="card-body">
         <img src={Logo} alt="" width="150"/>
           <hr className="separator" />
