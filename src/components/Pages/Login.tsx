@@ -19,8 +19,9 @@ useEffect(() => {
 
     spotify.getPlaylist("0TGFw5JNHqPKya8QEYTMcu").then((playlist:any)=>{ console.log(playlist) })
     window.location.hash=""
-    //window.history.go(-2)
+    window.history.go(-2)
   }
+  
   
 }, [])
   return (
