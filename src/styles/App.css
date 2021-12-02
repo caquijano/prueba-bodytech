@@ -16,10 +16,35 @@
 color: var(--white);
 font-weight: bold ;
 }
+
 .btnLogin:hover{
  color: var(--white);
 }
-.separator{
-  color: var(--primary-color);
+.btnSubmit{
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: 100%;
+  padding-block: 7px;
+  border-width: 0ch;
+color: var(--white);
+font-weight: bold ;
+}
+.error-container{
+  text-align: center;
+  height: 90vh;
+  display: block;
+  background-color: var(--primary-color);
+}
+.color-primary{
+color: var(--primary-color);
 
+}
+.color-primary:hover{
+color: var(--primary-color);
+cursor: pointer;
+
+}
+.not-found{
+  font-size: 220px;
+  color: #fff;
 }
