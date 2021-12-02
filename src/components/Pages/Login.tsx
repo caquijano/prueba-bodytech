@@ -19,11 +19,15 @@ useEffect(() => {
 
     spotify.getPlaylist("0TGFw5JNHqPKya8QEYTMcu").then((playlist:any)=>{ console.log(playlist) })
     window.location.hash=""
+    setTimeout(function(){
+  if(window.localStorage.getItem("SpotifyUser")){
     window.history.go(-2)
   }
-  
+},200);
+  }
   
 }, [])
+
   return (
     <div style={{width:"100%", display:"flex",justifyContent: "center", alignItems: "center", paddingBlock:"5%"}}>
       <div className="card text-center col-sm-5 ">
