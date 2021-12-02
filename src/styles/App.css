@@ -6,3 +6,20 @@
   --white: #fff;
 }
 
+.btnLogin{
+  margin-block: 30px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: 90%;
+  padding-block: 7px;
+  border-width: 0ch;
+color: var(--white);
+font-weight: bold ;
+}
+.btnLogin:hover{
+ color: var(--white);
+}
+.separator{
+  color: var(--primary-color);
+
+}

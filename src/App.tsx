@@ -1,12 +1,16 @@
-import React from 'react';
-import Searcher from './components/Searcher';
+import React from "react";
+import Login from "./components/Pages/Login";
+import Navbar from "./components/Parts/Navbar";
+import Searcher from "./components/Searcher";
 
 function App() {
+
   return (
-    <div className="App">
-      <Searcher/>
-     <h3>helloworld</h3>
-    </div>
+    <>
+      <Navbar/>
+        <Login/>
+      <Searcher />
+    </>
   );
 }
 
