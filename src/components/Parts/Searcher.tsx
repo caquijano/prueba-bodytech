@@ -12,7 +12,7 @@ function Searcher() {
     setTracks({ ...tracks, [e.target.name]: e.target.value });
   };
   const onSubmit = () => {
-    navigate(`/search/${tracks.track.replace(/\s+/g, '')}`);
+    navigate(`/search/${tracks.track}`);
   };
 
   return (

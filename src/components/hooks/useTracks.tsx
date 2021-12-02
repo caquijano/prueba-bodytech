@@ -5,10 +5,10 @@ export const useTracks = (value:string, indice:string) => {
 
     const [plist, setPlist] = useState<any>("hello")
     const spotify = new SpotifyWebApi();
-    console.log("value---->"+`${value}`)
+    console.log("value---->"+`${value.replace("%20", " ")}`)
     useEffect(() => {
     spotify.setAccessToken(window.localStorage.getItem("SpotifyToken"))
-    spotify.searchTracks(value,{limit: 10, offset: parseInt(indice)}).then(
+    spotify.searchTracks(value.replace("%20", " "),{limit: 10, offset: parseInt(indice)}).then(
         function (data) {
           setPlist(data)
         },
